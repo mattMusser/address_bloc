@@ -21,7 +21,7 @@ require_relative 'entry'
   def remove_entry(name, phone_number, email)
     index = 0
     entries.each do |entry|
-      if name > entry.name
+      if name == entry.name && phone_number == entry.phone_number
         break
       end
       index+= 1

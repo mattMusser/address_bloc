@@ -47,11 +47,11 @@ RSpec.describe AddressBook do
     it "removes the correct information from entries" do
       book = AddressBook.new
       book.remove_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
-      remove_entry = book.entries[0]
+      delete_entry = book.entries[0]
 
-      expect(remove_entry.name).to eq('Ada Lovelace')
-      expect(remove_entry.phone_number).to eq('010.012.1815')
-      expect(remove_entry.email).to eq('augusta.king@lovelace.com')
+      expect(delete_entry.name).to eq('Ada Lovelace')
+      expect(delete_entry.phone_number).to eq('010.012.1815')
+      expect(delete_entry.email).to eq('augusta.king@lovelace.com')
     end
   end
 end

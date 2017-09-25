@@ -22,11 +22,11 @@ require_relative 'entry'
     index = 0
     entries.each do |entry|
       if name == entry.name && phone_number == entry.phone_number
-        break
+        the_entry = entry
       end
       index+= 1
+      entries.delete(the_entry)
     end
-    entries.delete(Entry.new(name, phone_number, email))
   end
 
 end

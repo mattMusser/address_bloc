@@ -20,12 +20,13 @@ require_relative 'entry'
 
   def remove_entry(name, phone_number, email)
     index = 0
+    entry_to_delete = nil
     entries.each do |entry|
       if name == entry.name && phone_number == entry.phone_number
-        the_entry = entry
+      entry_to_delete = entry
       end
       index+= 1
-      entries.delete(the_entry)
+      entries.delete(entry_to_delete)
     end
   end
 

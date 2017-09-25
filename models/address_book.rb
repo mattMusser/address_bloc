@@ -22,12 +22,12 @@ require_relative 'entry'
     index = 0
     entry_to_delete = nil
     entries.each do |entry|
-      if name == entry.name && phone_number == entry.phone_number
-      entry_to_delete = entry
+      if name == entry.name && phone_number == entry.phone_number && email == entry.email
+        entry_to_delete = entry
       end
       index+= 1
-      entries.delete(entry_to_delete)
     end
+    entries.delete(entry_to_delete)
   end
 
 end

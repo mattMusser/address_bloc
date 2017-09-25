@@ -24,7 +24,9 @@ require_relative 'entry'
       if name > entries.name
         break
       end
+      index+= 1
     end
-    index+= 1
+    entries.delete(Entry.new(name, phone_number, email))
   end
+
 end

@@ -24,6 +24,7 @@ require_relative 'entry'
     entries.each do |entry|
       if name == entry.name && phone_number == entry.phone_number && email == entry.email
         entry_to_delete = entry
+        p entry_to_delete
       end
       index+= 1
     end

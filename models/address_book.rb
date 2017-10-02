@@ -45,7 +45,16 @@ class AddressBook
         lower = mid + 1 # <== Set this because the name must be in the upper half of the array
       end
     end
-
     return nil # If we divide and conquer to the point where no match is found, return nil.
+  end
+
+  def iterative_search(name)
+    AddressBook.entries.each do |entry|
+      if name == entry
+        return entry
+      else
+        return nil
+      end
+    end
   end
 end
